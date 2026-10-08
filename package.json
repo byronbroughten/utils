@@ -1,0 +1,36 @@
+{
+  "name": "@byronbroughten/utils",
+  "version": "0.1.0",
+  "description": "Domain-free TypeScript utilities, one subpath per module.",
+  "type": "module",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./lazy": {
+      "source": "./src/lazy.ts",
+      "types": "./dist/lazy.d.ts",
+      "import": "./dist/lazy.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.test.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "tsc": "tsc -p .",
+    "lint": "eslint . && npm run -s lint:docs",
+    "lint:docs": "lint-docs --published .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@byronbroughten/config": "^0.1.0",
+    "eslint": "^9.35.0",
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.11"
+  }
+}

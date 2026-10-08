@@ -1,0 +1,12 @@
+{
+  // `npm run build`: ESM, declarations and declaration maps into dist/, tests left out.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": ["src/**/*.test.ts"]
+}
