@@ -51,11 +51,13 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
     "tsc": "tsc -p .",
     "lint": "eslint . && npm run -s lint:docs",
     "lint:docs": "lint-docs --published .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "smoke": "node scripts/smoke.js"
   },
   "devDependencies": {
     "@byronbroughten/config": "^0.1.0",
