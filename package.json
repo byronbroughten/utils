@@ -13,6 +13,11 @@
       "types": "./dist/lazy.d.ts",
       "import": "./dist/lazy.js"
     },
+    "./obj": {
+      "source": "./src/Obj.ts",
+      "types": "./dist/Obj.d.ts",
+      "import": "./dist/Obj.js"
+    },
     "./serial-date": {
       "source": "./src/SerialDate.ts",
       "types": "./dist/SerialDate.d.ts",
@@ -22,6 +27,16 @@
       "source": "./src/SerialDateTime.ts",
       "types": "./dist/SerialDateTime.d.ts",
       "import": "./dist/SerialDateTime.js"
+    },
+    "./str": {
+      "source": "./src/Str.ts",
+      "types": "./dist/Str.d.ts",
+      "import": "./dist/Str.js"
+    },
+    "./val": {
+      "source": "./src/Val.ts",
+      "types": "./dist/Val.d.ts",
+      "import": "./dist/Val.js"
     }
   },
   "files": [
