@@ -8,6 +8,11 @@
     "access": "public"
   },
   "exports": {
+    "./arr": {
+      "source": "./src/Arr.ts",
+      "types": "./dist/Arr.d.ts",
+      "import": "./dist/Arr.js"
+    },
     "./lazy": {
       "source": "./src/lazy.ts",
       "types": "./dist/lazy.d.ts",
