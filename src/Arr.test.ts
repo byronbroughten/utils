@@ -262,9 +262,9 @@ describe("Arr.findAndRemoveFirst", () => {
   });
 
   it("throws when nothing matches and finding is required", () => {
-    expect(() => Arr.findAndRemoveFirst([1], (n) => n === 2, true)).toThrowError(
-      "Value not found to remove.",
-    );
+    expect(() =>
+      Arr.findAndRemoveFirst([1], (n) => n === 2, true),
+    ).toThrowError("Value not found to remove.");
   });
 });
 
