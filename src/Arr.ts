@@ -232,7 +232,10 @@ export const Arr = {
   ): Extract<A, B>[] {
     return a.filter((str) => b.includes(str as B)) as Extract<A, B>[];
   },
-  extractOrder<A, B extends A>(a: readonly A[], b: readonly B[]): Extract<A, B>[] {
+  extractOrder<A, B extends A>(
+    a: readonly A[],
+    b: readonly B[],
+  ): Extract<A, B>[] {
     return b.filter((str) => a.includes(str)) as Extract<A, B>[];
   },
   combineWithoutIdenticals<A, B>(a: A[], b: B[]): (A | B)[] {
