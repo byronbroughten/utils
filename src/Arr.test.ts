@@ -183,6 +183,23 @@ describe("Arr.insert", () => {
   });
 });
 
+describe("Arr.moveBlock", () => {
+  const letters = ["a", "b", "c", "d", "e"];
+
+  it("moves a block right, before the item named by its index on the input", () => {
+    expect(
+      Arr.moveBlock(letters, { index: 0, count: 2, beforeIndex: 4 }),
+    ).toEqual(["c", "d", "a", "b", "e"]);
+    expect(letters).toEqual(["a", "b", "c", "d", "e"]);
+  });
+
+  it("moves a block left", () => {
+    expect(
+      Arr.moveBlock(letters, { index: 3, count: 1, beforeIndex: 1 }),
+    ).toEqual(["a", "d", "b", "c", "e"]);
+  });
+});
+
 describe("Arr.replaceAtIndex", () => {
   it("returns a copy with the index's value replaced", () => {
     const letters = ["a", "b"];

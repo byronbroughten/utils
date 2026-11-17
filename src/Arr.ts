@@ -5,6 +5,12 @@ export interface IndexRange {
   endIndex: number;
 }
 
+export interface BlockMove {
+  index: number;
+  count: number;
+  beforeIndex: number;
+}
+
 export const Arr = {
   indexesFromUntil(from: number, until: number): number[] {
     const indexes: number[] = [];
@@ -125,6 +131,18 @@ export const Arr = {
     const nextArr = [...arr];
     nextArr.splice(index, 0, value);
     return nextArr;
+  },
+  // `count` items from `index` moved to sit before the item now at `beforeIndex`.
+  moveBlock<V>(
+    arr: readonly V[],
+    { index, count, beforeIndex }: BlockMove,
+  ): V[] {
+    const block = arr.slice(index, index + count);
+    const rest = [...arr.slice(0, index), ...arr.slice(index + count)];
+    const restBeforeIndex =
+      beforeIndex > index ? beforeIndex - count : beforeIndex;
+    rest.splice(restBeforeIndex, 0, ...block);
+    return rest;
   },
   replaceAtIndex<V>(arr: readonly V[], value: V, index: number): V[] {
     const nextArr = [...arr];
