@@ -111,6 +111,21 @@ describe("Arr.sortDescending", () => {
   });
 });
 
+describe("Arr.max", () => {
+  it("is undefined for an empty list", () => {
+    expect(Arr.max([])).toBeUndefined();
+  });
+
+  it("is the only item of a one-item list", () => {
+    expect(Arr.max([4])).toBe(4);
+  });
+
+  it("is the largest of several, negatives included", () => {
+    expect(Arr.max([-3, 2, -1, 0])).toBe(2);
+    expect(Arr.max([-3, -7, -5])).toBe(-3);
+  });
+});
+
 describe("Arr.oneOrThrow", () => {
   it("returns the only item", () => {
     expect(Arr.oneOrThrow(["a"])).toBe("a");

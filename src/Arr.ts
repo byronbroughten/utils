@@ -86,6 +86,10 @@ export const Arr = {
     });
   },
 
+  max(nums: readonly number[]): number | undefined {
+    if (nums.length === 0) return undefined;
+    return Math.max(...nums);
+  },
   oneOrThrow<V>(arr: readonly V[]): V {
     if (arr.length < 1) {
       throw emptyArrayError();
