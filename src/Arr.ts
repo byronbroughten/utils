@@ -1,4 +1,4 @@
-import { Val } from "./Val.js";
+import { Val } from "./Val.ts";
 
 export interface IndexRange {
   startIndex: number;

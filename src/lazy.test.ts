@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { lazy } from "./lazy.js";
+import { lazy } from "./lazy.ts";
 
 describe("lazy", () => {
   it("doesn't compute until first read", () => {

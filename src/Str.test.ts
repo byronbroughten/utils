@@ -5,8 +5,8 @@ import {
   type SentenceToCamelCase,
   Str,
   type TakeFirstN,
-} from "./Str.js";
-import { assertType, type IsExactly } from "./testSupport/typeAssertions.js";
+} from "./Str.ts";
+import { assertType, type IsExactly } from "./testSupport/typeAssertions.ts";
 
 describe("Str.combineStrings", () => {
   it("joins the two strings", () => {

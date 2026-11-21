@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { SerialDate } from "./SerialDate.js";
+import { SerialDate } from "./SerialDate.ts";
 
 function ymd(year: number, month: number, day: number): SerialDate {
   return SerialDate.fromYmd({ year, month, day });

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { SerialDate } from "./SerialDate.js";
-import { SerialDateTime } from "./SerialDateTime.js";
+import { SerialDate } from "./SerialDate.ts";
+import { SerialDateTime } from "./SerialDateTime.ts";
 
 function iso(date: Date): string {
   return date.toISOString();

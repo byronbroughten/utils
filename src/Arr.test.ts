@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { Arr } from "./Arr.js";
+import { Arr } from "./Arr.ts";
 
 describe("Arr.indexesFromUntil", () => {
   it("lists every index from the start up to but not including the end", () => {

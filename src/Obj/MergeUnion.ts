@@ -1,4 +1,4 @@
-import type { Merge } from "./merge.js";
+import type { Merge } from "./merge.ts";
 
 type CommonKeys<T extends object> = keyof T;
 type AllKeys<T> = T extends unknown ? keyof T : never;

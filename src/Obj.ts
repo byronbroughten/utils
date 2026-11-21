@@ -1,9 +1,9 @@
-import { merge } from "./Obj/merge.js";
-import { spread } from "./Obj/spread.js";
-import { type RemoveFirstN, Str, type TextJoin } from "./Str.js";
-import { type PrimitiveValueName, type PureValue, Val } from "./Val.js";
+import { merge } from "./Obj/merge.ts";
+import { spread } from "./Obj/spread.ts";
+import { type RemoveFirstN, Str, type TextJoin } from "./Str.ts";
+import { type PrimitiveValueName, type PureValue, Val } from "./Val.ts";
 
-export type { Merge } from "./Obj/merge.js";
+export type { Merge } from "./Obj/merge.ts";
 
 export type StrictOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 export type DistributiveOmit<T, K extends keyof T> = T extends unknown

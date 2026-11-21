@@ -1,7 +1,7 @@
 import { describe, it } from "vitest";
 
-import { assertType, type IsExactly } from "../testSupport/typeAssertions.js";
-import type { Spread } from "./spread.js";
+import { assertType, type IsExactly } from "../testSupport/typeAssertions.ts";
+import type { Spread } from "./spread.ts";
 
 interface Sample1 {
   a: 1;

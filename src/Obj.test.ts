@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { Obj } from "./Obj.js";
-import { assertType, type IsExactly } from "./testSupport/typeAssertions.js";
+import { Obj } from "./Obj.ts";
+import { assertType, type IsExactly } from "./testSupport/typeAssertions.ts";
 
 describe("Obj.toKeyedMap", () => {
   it("keys each entry by its id field and stamps its outer key as the name", () => {
