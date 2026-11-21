@@ -1,4 +1,4 @@
-import type { Merge } from "./merge.js";
+import type { Merge } from "./merge.ts";
 
 export type Spread<A extends readonly unknown[]> = A extends [
   infer L,

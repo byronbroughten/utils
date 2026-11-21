@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import type { SerialDate } from "./SerialDate.js";
-import { assertType, type IsExactly } from "./testSupport/typeAssertions.js";
-import { Val, validationError } from "./Val.js";
+import type { SerialDate } from "./SerialDate.ts";
+import { assertType, type IsExactly } from "./testSupport/typeAssertions.ts";
+import { Val, validationError } from "./Val.ts";
 
 describe("validationError", () => {
   it("builds a plain Error naming the value and what it is not", () => {

@@ -1,4 +1,4 @@
-import { SerialDate, zonedWallClockParts } from "./SerialDate.js";
+import { SerialDate, zonedWallClockParts } from "./SerialDate.ts";
 
 // A serial's fraction is local wall-clock time, so an instant needs that date's offset.
 export const SerialDateTime = {
