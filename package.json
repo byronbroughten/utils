@@ -1,6 +1,6 @@
 {
   "name": "@byronbroughten/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Domain-free TypeScript utilities, one subpath per module.",
   "type": "module",
   "license": "ISC",
