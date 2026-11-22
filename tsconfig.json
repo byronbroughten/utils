@@ -1,6 +1,6 @@
 {
   // The utils program: src/ with its tests, checked under the same module rules the build emits with.
-  "extends": "@byronbroughten/config/tsconfig.base.json",
+  "extends": "@byronbroughten/code-style/tsconfig.base.json",
   "compilerOptions": {
     "target": "ES2022",
     "module": "nodenext",
