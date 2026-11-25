@@ -1,5 +1,5 @@
 // @ts-check
-// JS so Node runs it bare, as utils has no tsx: pack utils, install the tarball into a temp project, import it from Node and check its types with tsc.
+// JS so Node runs it bare, as utils has no tsx: build and pack utils, install the tarball into a temp project, import it from Node and check its types with tsc.
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -45,6 +45,8 @@ takesSerial(45000);
 
 const scratchDir = mkdtempSync(join(tmpdir(), "utils-smoke-"));
 try {
+  // Built by name, as an `ignore-scripts` npmrc skips the prepack build and would pack a stale dist.
+  run("npm", ["run", "build"], utilsDir);
   const [{ filename }] = JSON.parse(
     run("npm", ["pack", "--json", "--pack-destination", scratchDir], utilsDir),
   );
